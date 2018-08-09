@@ -28,7 +28,7 @@ formtitlee= ()=> {
         	type: 'GET',
         	dataType: 'json',
         	async:true,
-        	url: "http://www.omdbapi.com/?s="+title+"&apikey=daae9546",
+        	url: "https://www.omdbapi.com/?s="+title+"&apikey=daae9546",
         	success: (response)=>{
         		console.log(response);
         		$("#load").hide();
@@ -69,7 +69,7 @@ formyeartitlee=()=>{
         	type: 'GET',
         	dataType: 'json',
         	async:true,
-        	url: "http://www.omdbapi.com/?s="+yeartitle+"&y="+year+"&apikey=daae9546",
+        	url: "https://www.omdbapi.com/?s="+yeartitle+"&y="+year+"&apikey=daae9546",
         	success: (response)=>{
         		console.log(response);
         	    $("#load").hide();
@@ -103,7 +103,7 @@ formid=()=>{
         	type: 'GET',
         	dataType: 'json',
         	async:true,
-        	url: "http://www.omdbapi.com/?i="+id+"&apikey=daae9546",
+        	url: "https://www.omdbapi.com/?i="+id+"&apikey=daae9546",
         	success: (response)=>{
         		console.log(response);
                 $("#load").hide();
@@ -138,7 +138,7 @@ formid=()=>{
         	type: 'GET',
         	dataType: 'json',
         	async:true,
-        	url: "http://www.omdbapi.com/?i="+id+"&apikey=daae9546",
+        	url: "https://www.omdbapi.com/?i="+id+"&apikey=daae9546",
         	success: (response)=>{
         		console.log(response);
                 $("#load").hide();
