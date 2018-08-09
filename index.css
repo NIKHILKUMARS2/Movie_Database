@@ -1,0 +1,51 @@
+body{
+	background-image: url("background.jpg"); 
+}
+.navbar {
+color:#77ADFC;
+text-align: center;
+justify-content: center;
+}
+
+
+.jumbotron{
+	color: white ;
+	border-radius: 1.5%;
+}
+
+.radios{
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	padding: 2em;
+}
+.main-text{
+	text-align: center;
+}
+
+.cards{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	padding-bottom:  3em;
+}
+
+.imgg{
+width: 400px;
+height: 400px; 
+}  
+
+.err{
+	color: white;
+}
+.footer {
+	position: fixed;
+   left: 0;
+   bottom:0;
+   width: 100%;
+   background-color: #000000;
+   color: white;
+   text-align: center;
+   
+}        

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Movies</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, userscalable=no">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="index.css">
+   
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript" src="index.js"></script>
+
+</head>
+<body>
+
+
+  <nav class="navbar bg-dark">
+  <a class="navbar-brand" href="index.html">Movie Database</a>
+  </nav>
+
+<div class="container mt-5" >
+        <div class="jumbotron bg-dark">
+        	<h3 class="main-text">Search For Any Movie</h3>
+        	<div class="radios">
+
+               <div class="custom-control custom-radio custom-control-inline">
+                  <input type="radio" class="custom-control-input" id="radiotitle" name="inlineRadios" value="titleradio" checked>
+                  <label class="custom-control-label" for="radiotitle">Title</label>
+               </div>
+
+
+              <div class="custom-control custom-radio custom-control-inline">
+                  <input type="radio" class="custom-control-input" id="radioyear" name="inlineRadios" value="yearradio">
+                  <label class="custom-control-label" for="radioyear">Year</label>
+              </div>
+
+
+             <div class="custom-control custom-radio custom-control-inline">
+                  <input type="radio" class="custom-control-input" id="radioid" name="inlineRadios" value="idradio">
+                  <label class="custom-control-label" for="radioid">Id</label>
+             </div>
+
+            </div>
+            <form id="formtitle" action="#" method="GET" onsubmit="formtitlee()">
+               <div class="form-group">
+                 <label for="formGroupExampleInput">Title</label>
+                 <input type="text" class="form-control" id="title" placeholder="Enter the title(ex:-antman)" required>
+
+               </div>
+
+               <input  type="submit" value="Submit" id="submittitle" class="btn btn-primary">
+               <button type="reset" class="btn btn-primary">Reset</button>
+            </form>
+
+            <form id="formyear" action="#" method="GET" onsubmit="formyeartitlee()">
+               <div class="form-group" >
+                 <label for="formGroupExampleInput">Title</label>
+                 <input type="text" class="form-control" id="yeartitle" placeholder="Enter the title(ex:-antman)" required>
+                 <div class="invalid-feedback">
+                 	please provide a valid title.
+                 </div>                 
+               </div>
+               <div class="form-group">
+                 <label for="formGroupExampleInput2">Year</label>
+                 <input type="text" class="form-control" id="year" placeholder="Enter the year(ex:-2015)" required>
+                 <div class="invalid-feedback">
+                 	please provide a valid Year.
+                 </div>                 
+               </div>
+
+               <button type="submit" id="submityear" class="btn btn-primary">Submit</button>
+               <button type="reset" class="btn btn-primary">Reset</button>
+            </form>
+            <form id="formid" action="#" method="GET" onsubmit="formid()">
+               <div class="form-group">
+                 <label for="formGroupExampleInput2">Id</label>
+                 <input type="text" class="form-control" id="id" placeholder="Enter the Id" required>
+                 <div class="invalid-feedback">
+                 	please provide a valid Id.
+                 </div>                  
+               </div>
+               <button type="submit" id="submitid" class="btn btn-primary">Submit</button>
+               <button type="reset" class="btn btn-primary">Reset</button>
+            </form>                        
+
+    </div>    
+</div>
+
+
+
+<div class="m-3 text-center">
+  <img src="200w.webp" id="load" class="img-fluid">
+</div>
+<div class="m-3 text-center err" id="error">
+  <h1>Sorry no movies available</h1>
+</div>
+
+<div class="container">
+       <div id="moviecards" class="cards"></div>
+</div>
+<!-- Button trigger modal -->
+<button type="button" id="details" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+  Launch demo modal
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body" id="modalbody">
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+ <div class="footer">
+  <p>@Copywrite:Movie Database</p>
+</div>
+
+
+   
+
+<!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+</html>
